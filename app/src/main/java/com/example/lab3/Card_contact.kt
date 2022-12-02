@@ -15,6 +15,8 @@ class Card_contact : AppCompatActivity() {
         setContentView(R.layout.contact)
         title = "Информация"
         val txt = findViewById<TextView>(R.id.textView2)
+        val txtFamilya = findViewById<TextView>(R.id.textView3)
+        val txtPhone = findViewById<TextView>(R.id.textView4)
         val buttonExit = findViewById<Button>(R.id.button4)
         val buttonDelete = findViewById<Button>(R.id.button3)
         val uid = intent.getLongExtra("Id", 0)
@@ -22,7 +24,7 @@ class Card_contact : AppCompatActivity() {
         val objects = dbHelper.getById(uid)
 
 
-        txt.text = objects?.title
+        txt.text = "Фамилия:" + " " + objects?.title
 
         buttonExit.setOnClickListener {
             val intent = Intent(this@Card_contact, MainActivity::class.java )
