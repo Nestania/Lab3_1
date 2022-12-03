@@ -26,6 +26,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Card_contact"/>
+        <activity android:name=".Card_change"/>
     </application>
 
 </manifest>
