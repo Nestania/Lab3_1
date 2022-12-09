@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:text="Создать контакт"
+        android:text="👤 Создать контакт"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -33,7 +33,7 @@
         app:layout_constraintVertical_chainStyle="spread_inside" />
 
     <EditText
-        android:id="@+id/editText1"
+        android:id="@+id/editTextPhone"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:ems="10"

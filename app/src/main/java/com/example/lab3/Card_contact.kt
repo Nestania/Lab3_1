@@ -12,9 +12,10 @@ class Card_contact : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.contact)
         title = "Информация"
-        val txt = findViewById<TextView>(R.id.textView2)
-        val txtFamilya = findViewById<TextView>(R.id.textView3)
-        val txtPhone = findViewById<TextView>(R.id.textView4)
+        val txtlastName = findViewById<TextView>(R.id.textViewlastName)
+        val txtfirstName = findViewById<TextView>(R.id.textViewfirstName)
+        val txtPhone = findViewById<TextView>(R.id.textViewPhone)
+        val txtbirthday = findViewById<TextView>(R.id.textViewbirthday)
         val buttonExit = findViewById<Button>(R.id.button4)
         val buttonDelete = findViewById<Button>(R.id.button3)
         val buttonChange = findViewById<Button>(R.id.button2)
@@ -22,8 +23,11 @@ class Card_contact : AppCompatActivity() {
         val dbHelper = DBHelper(this)
         val item = dbHelper.getById(uid)
 
+        txtfirstName.text = "Имя: ${item?.lastName}"
+        txtlastName.text = "Фамилия: ${item?.firstName}"
+        //txtPhone.text = "Номер телефона: ${item?.phone}"
+        txtbirthday.text = "Дата рождения: ${item?.birthday}"
 
-        txt.text = "Фамилия: ${item?.title}"
 
         buttonExit.setOnClickListener {
             val intent = Intent(this@Card_contact, MainActivity::class.java )
